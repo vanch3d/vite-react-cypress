@@ -5,5 +5,7 @@ describe('<App />', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
     cy.mount(<App />)
+    cy.get("button").should("contain.text","0")
+    cy.get("button").click().should("contain.text","1")
   })
 })
